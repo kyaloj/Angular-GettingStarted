@@ -8,7 +8,7 @@ import 'rxjs/add/operator/do';
 
 @Injectable()
 export class ProductService {
-	private _productsUrl = '.api/products/products.json'
+	private _productsUrl = './api/products/products.json'
 	constructor(private _http: HttpClient){}
     getProducts(): Observable<IProduct[]> {
 	   return this._http.get<IProduct[]>(this._productsUrl)
