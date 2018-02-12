@@ -8,7 +8,7 @@ import 'rxjs/add/operator/do';
 
 @Injectable()
 export class ProductService {
-	private _productsUrl = 'http://localhost:3000/users'
+	private _productsUrl = 'http://localhost:3000/products'
 
 	constructor(private _http: HttpClient){}
 
