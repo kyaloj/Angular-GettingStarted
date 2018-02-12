@@ -8,8 +8,10 @@ import 'rxjs/add/operator/do';
 
 @Injectable()
 export class ProductService {
-	private _productsUrl = './api/products/products.json'
+	private _productsUrl = 'http://localhost:3000/users'
+
 	constructor(private _http: HttpClient){}
+
     getProducts(): Observable<IProduct[]> {
 	   return this._http.get<IProduct[]>(this._productsUrl)
 		.do(data => console.log(JSON.stringify(data)))
